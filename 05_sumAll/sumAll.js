@@ -8,18 +8,15 @@ const sumAll = function(num1,num2) {
         return "ERROR";
     }
 
-    if(num2 > num1){
-        begin = num1;
-        end = num2;
-    }
-    else{
-        begin = num2;
-        end = num1;
+    if(num1 > num2){
+        let temp = num1;
+        num1 = num2;
+        num2 = temp;
     }
 
-    while(begin<=end){
-        sum+=begin;
-        begin++;
+    while(num1<=num2){
+        sum+=num1;
+        num1++;
     }
 
     return sum;
